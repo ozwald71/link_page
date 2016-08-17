@@ -1,0 +1,91 @@
+.body {
+background-color: #cfcdff;
+}
+
+
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: lightblue;color:white;}
+footer {background: lightblue;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+ padding: 0;
+}
+   
+.nav ul a {
+ text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+
+/* the following pertains to image sprites with navigation
+
+#navlist {
+    position: relative;
+}
+
+#navlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#navlist li, #navlist a {
+    height: 44px;
+    display: block;
+}
+
+#home {
+    left: 0px;
+    width: 46px;
+    background: url('img_navsprites_hover.gif') 0 0;
+}
+
+#prev {
+    left: 63px;
+    width: 43px;
+    background: url('img_navsprites_hover.gif') -47px 0;
+}
+
+#next {
+    left: 129px;
+    width: 43px;
+    background: url('img_navsprites_hover.gif') -91px 0;
+}
+
+#home a:hover {
+    background: url('img_navsprites_hover.gif') 0 -45px;
+}
+
+#prev a:hover {
+    background: url('img_navsprites_hover.gif') -47px -45px;
+}
+
+#next a:hover {
+    background: url('img_navsprites_hover.gif') -91px -45px;
+}
